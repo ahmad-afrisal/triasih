@@ -1,3 +1,58 @@
+<?php
+session_start();
+include 'config.php';
+
+if (isset($_POST["submit"])) {
+  # code...
+  $email = $_POST["email"];
+  $password = $_POST["password"];
+
+
+  $result = mysqli_query($config,"SELECT * FROM users WHERE email = '$email'");
+
+  if (mysqli_num_rows($result) === 1) {
+    # code...
+    $row = mysqli_fetch_assoc($result);
+    if (password_verify($password,$row["password"])) {
+
+      $_SESSION["login"] = true;
+      $_SESSION["id"] = $row["id"];
+      $_SESSION["name"] = $row["name"];
+      $_SESSION["username"] = $row["username"];
+      $_SESSION["roles"] = $row["roles"];
+      if($_SESSION["roles"] == "ADMIN") {
+        header("Location: index.php");
+      } else {
+        header("Location: backend/dashboard.php");
+      }
+      exit;
+    }
+    
+  }
+  $error = true;
+  
+}
+
+
+if(isset($_SESSION['message']))
+{
+    ?>
+        <div class="toast-container align-items-center text-bg-primary border-0 position-fixed top-0 start-50 translate-middle-x">
+          <div id="liveToast" class="toast " role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="d-flex">
+              <div class="toast-body">
+                <?= $_SESSION['message']; ?>
+              </div>
+              <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+          </div>
+        </div>
+          <?php 
+    unset($_SESSION['message']);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,18 +108,21 @@
             <h2>
               Belanja kebutuhan utama, <br> menjadi lebih mudah.
             </h2>
-            <form action="" class="mt-3">
+            <form action="" method="POST" class="mt-3">
               <div class="mb-3">
                 <label class="form-label">Alamat Email</label>
-                <input type="email" class="form-control w-75">
+                <input type="email" name="email" class="form-control w-75">
               </div>
               <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" class="form-control w-75">
+                <input type="password" name="password" class="form-control w-75">
               </div>
-              <a href="dashboard.html" class="btn btn-success btn-block w-75 mt-4">
+              <?php if(isset($error)) : ?>
+                  <p style="color:red;">emai / password salah</p>
+                <?php endif; ?>
+              <button type="submit" name="submit" class="btn btn-success btn-block w-75 mt-4">
                 Masuk
-              </a>
+              </button>
               <a href="register.php" class="btn btn-signup btn-block w-75 mt-2">
                 Daftar
               </a>
@@ -75,6 +133,10 @@
     </div>
   </div>
 
+
+
+
+
   <?php include 'layouts/footer.php'; ?>
 
   <!-- Bootstrap core JavaScript -->
@@ -83,6 +145,11 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+    const toast = new bootstrap.Toast(toastLiveExample)
+    toast.show()
+
   </script>
   <script src="script/navbar-scroll.js"></script>
 </body>

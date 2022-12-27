@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +12,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Store - Your Best Marketplace</title>
+  <title>Triasih</title>
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link href="style/main.css" rel="stylesheet" />
@@ -36,13 +41,60 @@
           <li class="nav-item">
             <a href="#" class="nav-link">Rewards</a>
           </li>
-          <li class="nav-item">
-            <a href="register.php" class="nav-link">Sign Up</a>
-          </li>
-          <li class="nav-item">
-            <a href="login.php" class="btn btn-success nav-link px-4 text-white">Sign In</a>
-          </li>
         </ul>
+          <?php
+          if(isset($_SESSION["login"])) {
+            echo '
+            <!-- Desktop Menu -->
+            <!-- d-none = agar tidak muncul d mobile -->
+            <!-- d-lg-flex = agar muncul di tampilan desktop dengan mode flexbox -->
+            <ul class="navbar-nav d-none d-lg-flex">
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                  <img src="images/icon-user.png" alt="" class="rounded-circle me-2 profile-picture">
+                  Hi, Angga
+                </a>
+                <div class="dropdown-menu">
+                  <a href="dashboard.html" class="dropdown-item">Dashboard</a>
+                  <a href="dashboard-account.html" class="dropdown-item">Settings</a>
+                  <div class="dropdwon-divider"></div>
+                  <a href="logout.php" class="dropdown-item">Logout</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link d-inline-block mt-2">
+                  <img src="images/icon-cart-empty.svg" alt="" srcset="">
+                </a>
+              </li>
+            </ul>
+            <!-- End Desktop Menu -->
+    
+            <ul class="navbar-nav d-block d-lg-none">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  Hi, Angga
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link d-inline-block">
+                  Cart
+                </a>
+              </li>
+            </ul>
+            ';
+          } else {
+            echo '<li class="nav-item">
+                    <a href="register.php" class="nav-link">Sign Up</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="login.php" class="btn btn-success nav-link px-4 text-white">Sign In</a>
+                  </li>
+                ';
+          }
+
+          ?>
+          
+       
       </div>
     </div>
   </nav>

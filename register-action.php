@@ -1,6 +1,6 @@
 <?php 
 
-
+session_start();
 include 'config.php';
 
 $name = strtolower($_POST["name"]);
@@ -34,8 +34,9 @@ $password = password_hash($password, PASSWORD_DEFAULT);
 
 
 // tambahkan user baru ke db
-mysqli_query($config, "INSERT INTO users VALUES (' ','$name','','','ahmadafrisal2002@gmail.com','','$password','6','','','USER')");
+mysqli_query($config, "INSERT INTO `users` (`users_id`, `name`, `username`, `phone_number`, `email`, `email_verified_at`, `password`, `provinces_id`, `address`, `zip_code`, `roles`) 
+                        VALUES (NULL, '$name', '', '', '$email', NULL, '$password', '1', '', '', 'USER')");
 
-
+$_SESSION['message'] = "Buat akun berhasil";
 header('Location:login.php');
 ?>
