@@ -85,3 +85,13 @@ LINK WIREFRAME / LO-FI DESIGN : https://www.figma.com/file/DwgRN55QD7D7fC9gmGWeS
 LINK VISUAL DESIGN / HI-FI DESIGN : https://www.figma.com/file/vExQtLoxNTQqqSkwHF9b2K/Wireframe-PWL?node-id=0%3A1&t=kT1VRB2aLC6oA8BP-1
 LINK ERD : https://drive.google.com/file/d/1oY2yPjeo0Tnu_Qxh6eQ5eRmeAnt2d-U3/view?usp=sharing
 LINK PYSICAL DATA : https://lucid.app/lucidchart/8eb312eb-6208-4d84-85ab-9df53f654fa2/edit?invitationId=inv_becb96ae-1fc2-4640-acf2-398743eb9b90
+
+<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="dashboard-products-details.html" class="card card-dashboard-product d-block">
+                      <div class="card-body">
+                        <img src="../../images/product-card-1.png" alt="" class="w-100 mb-2" srcset="">
+                        <div class="product-title">Shirup Marzzan</div>
+                        <div class="product-category">Foods</div>
+                      </div>
+                    </a>
+                  </div>

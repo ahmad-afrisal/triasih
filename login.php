@@ -20,9 +20,8 @@ if (isset($_POST["submit"])) {
       $_SESSION["name"] = $row["name"];
       $_SESSION["username"] = $row["username"];
       $_SESSION["roles"] = $row["roles"];
-      if($_SESSION["roles"] == "ADMIN") {
+      if($_SESSION["roles"] === "ADMIN") {
         header("Location: backend/dashboard/dashboard.php");
-
       } else {
         header("Location: index.php");
       }

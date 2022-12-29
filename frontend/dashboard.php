@@ -11,7 +11,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Store - Your Best Marketplace</title>
+  <title>Triasih</title>
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link href="../../style/main.css" rel="stylesheet" />
@@ -26,19 +26,12 @@
           <div class="sidebar-heading text-center">
             <img src="../../images/dashboard-logo.png" alt="" srcset="" class="my-4" width="120px">
           </div>
-          <div class="list-group list-group-flush">
-            <a href="" class="list-group-item list-group-item-action active">Dashboard</a>
-            <a href="../products/index.php" class="list-group-item list-group-item-action">Produk</a>
-            <a href="../transactions/index.php" class="list-group-item list-group-item-action">Transaksi</a>
-            <a href="../categories/" class="list-group-item list-group-item-action">Kategori</a>
-            <a href="#" class="list-group-item list-group-item-action">Pelanggan</a>
-            <a href="../provinces/index.php" class="list-group-item list-group-item-action">Provinsi</a>
-            <a href="#" class="list-group-item list-group-item-action">Ongkos Kirim</a>
-
-            <a href="#" class="list-group-item list-group-item-action">Akun</a>
-            <a href="logout.php" class="list-group-item list-group-item-action">Sign Up</a>
-
-          </div>
+            <div class="list-group list-group-flush">
+              <a href="dashboard.php" class="list-group-item list-group-item-action active">Dashboard</a>
+              <a href="dashboard-transactions.php" class="list-group-item list-group-item-action">Pesanan</a>
+              <a href="dashboard-account.php" class="list-group-item list-group-item-action">Akun</a>
+              <a href="../logout.php" class="list-group-item list-group-item-action">Sign Up</a>
+            </div>
         </div>
       <!-- End Sidebar -->
 
@@ -65,11 +58,17 @@
                         Hi, <?= $_SESSION['name']; ?>
                       </a>
                       <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Dashboard</a>
-                        <a href="#" class="dropdown-item">Settings</a>
+                        <a href="dashboard.html" class="dropdown-item">Dashboard</a>
+                        <a href="dashboard-account.html" class="dropdown-item">Settings</a>
                         <div class="dropdwon-divider"></div>
                         <a href="/" class="dropdown-item">Logout</a>
                       </div>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link d-inline-block mt-2">
+                        <img src="../../images/icon-cart-filled.svg" alt="" srcset="">
+                        <div class="card-badge">3</div>
+                      </a>
                     </li>
                 </ul>
 
@@ -78,6 +77,11 @@
                   <li class="nav-item">
                     <a href="#" class="nav-link">
                       Hi, Angga
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link d-inline-block">
+                      Cart
                     </a>
                   </li>
                 </ul>
@@ -137,7 +141,7 @@
                 <div class="row mt-3">
                   <div class="col-12 mt-2">
                     <h5 class="mb-3">Recent Transactions</h5>
-                    <a href="dashboard-transactions-details.html" class="card card-list d-block">
+                    <a href="dashboard-transactions-details.php" class="card card-list d-block">
                       <div class="card-body">
                         <div class="row">
                           <div class="col-md-1">
@@ -158,7 +162,7 @@
                         </div>
                       </div>
                     </a>
-                    <a class="card card-list d-block" href="dashboard-transactions-details.html">
+                    <a class="card card-list d-block" href="dashboard-transactions-details.php">
                       <div class="card-body">
                         <div class="row">
                           <div class="col-md-1">
@@ -179,7 +183,7 @@
                         </div>
                       </div>
                     </a>
-                    <a class="card card-list d-block" href="dashboard-transactions-details.html">
+                    <a class="card card-list d-block" href="dashboard-transactions-details.php">
                       <div class="card-body">
                         <div class="row">
                           <div class="col-md-1">

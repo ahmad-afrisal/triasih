@@ -102,9 +102,9 @@
                         <div class="row">
                           <div class="col-md-4 mb-4">
                             <div class="gallery-container position-relative">
-                              <img src="images/product-card-1.png" alt="" srcset="" class="w-100">
+                              <img src="../../images/product-card-1.png" alt="" srcset="" class="w-100">
                               <a href="#" class="delete-gallery">
-                                <img src="images/icon-delete.svg"
+                                <img src="../../images/icon-delete.svg"
                                   class="position-absolute top-0 start-100 translate-middle" alt=""
                                   srcset="">
                               </a>
@@ -112,18 +112,18 @@
                           </div>
                           <div class="col-md-4 mb-4">
                             <div class="gallery-container position-relative">
-                              <img src="images/product-card-2.png" alt="" srcset="" class="w-100">
+                              <img src="../../images/product-card-2.png" alt="" srcset="" class="w-100">
                               <a href="#" class="delete-gallery">
-                                <img src="images/icon-delete.svg"
+                                <img src="../../images/icon-delete.svg"
                                   class="position-absolute top-0 start-100 translate-middle" alt="" srcset="">
                               </a>
                             </div>
                           </div>
                           <div class="col-md-4 mb-4">
                             <div class="gallery-container position-relative">
-                              <img src="images/product-card-3.png" alt="" srcset="" class="w-100">
+                              <img src="../../images/product-card-3.png" alt="" srcset="" class="w-100">
                               <a href="#" class="delete-gallery">
-                                <img src="images/icon-delete.svg"
+                                <img src="../../images/icon-delete.svg"
                                   class="position-absolute top-0 start-100 translate-middle" alt="" srcset="">
                               </a>
                             </div>
