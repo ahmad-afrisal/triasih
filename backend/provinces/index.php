@@ -1,7 +1,6 @@
 <?php
     session_start();
     include '../../config.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -31,11 +30,12 @@
           </div>
           <div class="list-group list-group-flush">
             <a href="dashboard.html" class="list-group-item list-group-item-action">Dashboard</a>
-            <a href="index.php" class="list-group-item list-group-item-action active">Produk</a>
-            <a href="dashboard-transactions.html" class="list-group-item list-group-item-action">Transactions</a>
-            <a href="dashboard-settings.html" class="list-group-item list-group-item-action ">Store Settings</a>
-            <a href="dashboard-account.html" class="list-group-item list-group-item-action">My Account</a>
-            <a href="index.html" class="list-group-item list-group-item-action">Sign Up</a>
+            <a href="index.php" class="list-group-item list-group-item-action">Produk</a>
+            <a href="dashboard-transactions.html" class="list-group-item list-group-item-action">Pesanan</a>
+            <a href="dashboard-settings.html" class="list-group-item list-group-item-action ">Kategori</a>
+            <a href="dashboard-account.html" class="list-group-item list-group-item-action">Pelanggan</a>
+            <a href="dashboard-account.html" class="list-group-item list-group-item-action  active">Provinsi</a>
+            <a href="index.html" class="list-group-item list-group-item-action">Sign Out</a>
           </div>
         </div>
       <!-- End Sidebar -->
@@ -127,8 +127,8 @@
                                                                 <td><?= $data['provinces_name']; ?></td>
                                                                 <td>Rp. <?= number_format($data['shipping_cost']); ?></td>
                                                                 <td>
-                                                                    <button class="btn btn-primary">Ubah</button>
-                                                                    <button class="btn btn-danger">Hapus</button>
+                                                                    <a href="edit.php?provinces_id=<?= $data['provinces_id'];?>" class="btn btn-primary">Ubah</a>
+                                                                    <a href="destroy.php?provinces_id=<?= $data['provinces_id'];?>" class="btn btn-danger">Hapus</a>
                                                                 </td>
                                                             </tr>
                                                             <?php

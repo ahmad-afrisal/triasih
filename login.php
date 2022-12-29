@@ -119,7 +119,7 @@ if(isset($_SESSION['message']))
                 <input type="password" name="password" class="form-control w-75">
               </div>
               <?php if(isset($error)) : ?>
-                  <p style="color:red;">emai / password salah</p>
+                  <p style="color:red;">email / password salah</p>
                 <?php endif; ?>
               <button type="submit" name="submit" class="btn btn-success btn-block w-75 mt-4">
                 Masuk
