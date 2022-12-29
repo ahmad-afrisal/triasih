@@ -44,21 +44,29 @@ session_start();
         </ul>
           <?php
           if(isset($_SESSION["login"])) {
-            echo '
-            <!-- Desktop Menu -->
-            <!-- d-none = agar tidak muncul d mobile -->
-            <!-- d-lg-flex = agar muncul di tampilan desktop dengan mode flexbox -->
+            ?>
             <ul class="navbar-nav d-none d-lg-flex">
               <li class="nav-item dropdown">
                 <a href="#" class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                  <img src="images/icon-user.png" alt="" class="rounded-circle me-2 profile-picture">
-                  Hi, Angga
+                  <img src="https://ui-avatars.com/api/?name=<?= $_SESSION['name']; ?>" alt="" class="rounded-circle me-2 profile-picture">
+                  Hi, <?= $_SESSION['name']; ?>
                 </a>
                 <div class="dropdown-menu">
-                  <a href="dashboard.html" class="dropdown-item">Dashboard</a>
-                  <a href="dashboard-account.html" class="dropdown-item">Settings</a>
-                  <div class="dropdwon-divider"></div>
-                  <a href="logout.php" class="dropdown-item">Logout</a>
+                  <?php
+                    if(isset($_SESSION['roles']) == 'ADMIN') {
+                      echo '<a href="backend/dashboard/dashboard.php" class="dropdown-item">Dashboard</a>       
+                      <a href="backend/users/dashboard-account.php" class="dropdown-item">Settings</a>
+                      <div class="dropdwon-divider"></div>
+                      <a href="logout.php" class="dropdown-item">Logout</a>';
+                    } else {
+                      echo '<a href="frontend/dashboard/dashboard.php" class="dropdown-item">Dashboard</a>       
+                      <a href="frontend/users/dashboard-account.php" class="dropdown-item">Settings</a>
+                      <div class="dropdwon-divider"></div>
+                      <a href="logout.php" class="dropdown-item">Logout</a>';
+                    }
+
+                  ?>
+                  
                 </div>
               </li>
               <li class="nav-item">
@@ -72,7 +80,7 @@ session_start();
             <ul class="navbar-nav d-block d-lg-none">
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  Hi, Angga
+                  Hi, <?= $_SESSION['name']; ?>
                 </a>
               </li>
               <li class="nav-item">
@@ -81,7 +89,8 @@ session_start();
                 </a>
               </li>
             </ul>
-            ';
+
+            <?php
           } else {
             echo '<li class="nav-item">
                     <a href="register.php" class="nav-link">Sign Up</a>

@@ -1,0 +1,87 @@
+------ INSERT DATA PROVINCES
+INSERT INTO provinces (provinces_id, name, shipping_cost) VALUES
+(1,'DKI Jakarta','45000'),
+(2,'Jawa Barat','52000'),
+(3,'Banten','51000'),
+(4,'Jawa Tengah','52000'),
+(5,'Daerah Istimewa Yogyakarta','59000'),
+(6,'Jawa Timur','46000'),
+(7,'Bali','46000'),
+(8,'Nusa Tenggara Barat','65000'),
+(9,'Nusa Tenggara Timur','76000'),
+(10,'Sulawesi Utara','65000'),
+(11,'Sulawesi Barat','17000'),
+(12,'Sulawesi Tengah','46000'),
+(13,'Sulawesi Tenggara','33000'),
+(14,'Sulawesi Selatan','10000'),
+(15,'Gorontalo','49000'),
+(16,'Naggroe Aceh Darussalam','91000'),
+(17,'Sumatra Utara','72000'),
+(18,'Sumatera Barat','65000'),
+(19,'Riau','63000'),
+(20,'Kepulauan Riau,','82000'),
+(21,'Jambi','51000'),
+(22,'Sumatra Selatan','55000'),
+(23,'Bangka Belitung','62000'),
+(24,'Bengkulu','64000'),
+(25,'Lampung','56000'),
+(26,'Kalimantan Utara','82000'),
+(27,'Kalimantan Barat','72000'),
+(28,'Kalimantan Tengah','62000'),
+(29,'Kalimantan Selatan','72000'),
+(30,'Kalimantan Timur','78000'),
+(31,'Maluku','72000'),
+(32,'Maluku Utara','103000'),
+(33,'Papua Barat','182000'),
+(34,'Papua','98000'),
+(35,'Papua Selatan','87000'),
+(36,'Papua Tengah','108000'),
+(37,'Papua Pegunungan','108000');
+Source : https://www.bola.com/ragam/read/5033184/daftar-37-provinsi-di-indonesia-dan-nama-ibu-kotanya
+
+
+------ INSERT DATA CATEGORY
+INSERT INTO categories (categories_id, name, slug, photo) VALUES
+(1,'Makanan','makanan','makanan.png'),
+(2,'Souvenir','souvenir','souvenir.png'),
+(3,'Baju','baju','baju.png'),
+(4,'Celana','celana','celana.png'),
+(5,'Aksesoris','aksesoris','aksesoris.png'),
+(6,'Kain','kain','kain.png');
+
+INSERT INTO products (products_id,product_name,slug,categories_id,price,description,weight) VALUES
+(1,'Baje Original','baje-original','1','20000','Baje merupakan salah satu kue yang cukup awet karena bisa bertahan hingga tiga bulan lamanya.','1'),
+(2,'Jepa','jepa','1','2000','Jepa merupakan kuliner khas dari suku mandar yang dapat anda temukan ketika mengunjungi ke kabupaten polewali mandar provinsi Sulawesi barat. Jepa memiliki bentuk yang bulat pipih yang terbuat dari sagu maupun singkong yang di dalamnya di masukan gula aren sehingga jepa ini memiliki rasa yang manis.','0.1'),
+(3,'Bolu Paranggi','bolu-paranggi','1','25000','Teksturnya sangat empuk dengan rasa manis dan legit dari bahan gua aren. Sebab bahan tersebutlah yang menjadikan kue bolu ini berwarna cokelat gelap. Dilihat dari bentuknya cukup unik, mirip mangkuk kecil yang imut dan lucu.','1'),
+(4,'Baje Kacang','baje-kacang','1','22000','Baje adalah salah satu dari banyaknya kudapan yang bisa anda temui.','1'),
+(5,'Lipa Saqbe Motif Sandeq','lipa-saqbe-motif-sandeq','6','100000','Lipa Saqbe Mandar adalah kerajinan tenun masyarakat Mandar pada umumnya yang dalam bahasa Mandar disebut sebagai Lipa Saqbe. Proses pembuatannya masih tradisional dan membutuhkan waktu yang sangat lama. Pembuatan Lipa Saqbe Mandar minimal memerlukan waktu tiga bulan','0.7'),
+(6,'Lipa saqbe Motif Bura','lipa-saqbe-motif-bura','6','100000','Lipa Saqbe Mandar adalah kerajinan tenun masyarakat Mandar pada umumnya yang dalam bahasa Mandar disebut sebagai Lipa Saqbe. Proses pembuatannya masih tradisional dan membutuhkan waktu yang sangat lama. Pembuatan Lipa Saqbe Mandar minimal memerlukan waktu tiga bulan','0.7'),
+(7,'Gantungan Kunci Lopi Sandeq','gantungan-kunci-lopi-sandeq','5','15000','','0.1'),
+(8,'Miniatur Lopi Sandeq','miniatur-lopi-sandeq','2','250000','','1.2'),
+(9,'Baju Saqbe Motif Yosa','baju-saqbe-motif-yosa','3','165000','','0.8'),
+(10,'Baju Saqbe Motif Burra','baju-saqbe-motif-burra','3','175000','','0.8');
+
+INSERT INTO product_galleries (galleries_id,products_id,photos) VALUES
+(1,'1','baje-ori-1.jpeg'),
+(2,'1','baje-ori-2.jpeg'),
+(3,'1','baje-ori-3.jpeg'),
+(4,'1','baje-ori-4.jpeg'),
+(5,'2','jepa-1.jpeg'),
+(6,'2','jepa-2.jpeg'),
+(7,'3','bolu-paranggi-1.jpeg'),
+(8,'3','bolu-paranggi-2.jpeg'),
+(9,'4','baje-kacang-1.jpeg'),
+(10,'4','baje-kacang-2.jpeg'),
+(11,'5','lipa-saqbe-motif-sandeq.jpg'),
+(12,'6','lipa-saqbe-motif-bura.jpg'),
+(13,'7','gantungan-kunci-lopi-sande.jpg'),
+(14,'8','miniatur-lopi-sandeq.png'),
+(15,'9','baju-saqbe-motif-yosa.png'),
+(16,'10','baju-saqbe-motif-burra.png');
+
+INSERT INTO transactions () VALUES ();
+
+LINK WIREFRAME / LO-FI DESIGN : https://www.figma.com/file/DwgRN55QD7D7fC9gmGWeSI/Wireframe-triasih.com?node-id=0%3A1&t=r7cqzNVvdL27zFJ8-1
+LINK VISUAL DESIGN / HI-FI DESIGN : https://www.figma.com/file/vExQtLoxNTQqqSkwHF9b2K/Wireframe-PWL?node-id=0%3A1&t=kT1VRB2aLC6oA8BP-1
+LINK ERD : https://drive.google.com/file/d/1oY2yPjeo0Tnu_Qxh6eQ5eRmeAnt2d-U3/view?usp=sharing
+LINK PYSICAL DATA : https://lucid.app/lucidchart/8eb312eb-6208-4d84-85ab-9df53f654fa2/edit?invitationId=inv_becb96ae-1fc2-4640-acf2-398743eb9b90

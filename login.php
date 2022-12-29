@@ -21,9 +21,10 @@ if (isset($_POST["submit"])) {
       $_SESSION["username"] = $row["username"];
       $_SESSION["roles"] = $row["roles"];
       if($_SESSION["roles"] == "ADMIN") {
-        header("Location: index.php");
+        header("Location: backend/dashboard/dashboard.php");
+
       } else {
-        header("Location: backend/dashboard.php");
+        header("Location: index.php");
       }
       exit;
     }

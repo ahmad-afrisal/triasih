@@ -35,7 +35,7 @@ $password = password_hash($password, PASSWORD_DEFAULT);
 
 // tambahkan user baru ke db
 mysqli_query($config, "INSERT INTO `users` (`users_id`, `name`, `username`, `phone_number`, `email`, `email_verified_at`, `password`, `provinces_id`, `address`, `zip_code`, `roles`) 
-                        VALUES (NULL, '$name', '', '', '$email', NULL, '$password', '1', '', '', 'USER')");
+                        VALUES (NULL, '$name', '', '', '$email', NULL, '$password', NULL, '', '', 'USER')");
 
 $_SESSION['message'] = "Buat akun berhasil";
 header('Location:login.php');

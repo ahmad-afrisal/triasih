@@ -1,3 +1,8 @@
+<?php
+  include '../../config.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,10 +12,10 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Store - Your Best Marketplace</title>
+  <title>Triasih</title>
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link href="style/main.css" rel="stylesheet" />
+  <link href="../../style/main.css" rel="stylesheet" />
 
 </head>
 
@@ -24,8 +29,8 @@
             <img src="images/dashboard-store-logo.svg" alt="" srcset="" class="my-4">
           </div>
           <div class="list-group list-group-flush">
-            <a href="dashboard.html" class="list-group-item list-group-item-action ">Dashboard</a>
-            <a href="dashboard-products.html" class="list-group-item list-group-item-action active">My Products</a>
+            <a href="dashboard.html" class="list-group-item list-group-item-action">Dashboard</a>
+            <a href="index.php" class="list-group-item list-group-item-action active">Produk</a>
             <a href="dashboard-transactions.html" class="list-group-item list-group-item-action">Transactions</a>
             <a href="dashboard-settings.html" class="list-group-item list-group-item-action ">Store Settings</a>
             <a href="dashboard-account.html" class="list-group-item list-group-item-action">My Account</a>
@@ -53,7 +58,7 @@
                 <ul class="navbar-nav ms-auto d-none d-lg-flex">
                     <li class="nav-item dropdown">
                       <a href="#" class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                        <img src="images/icon-user.png" alt="" class="rounded-circle me-2 profile-picture">
+                        <img src="../../images/icon-user.png" alt="" class="rounded-circle me-2 profile-picture">
                         Hi, Angga
                       </a>
                       <div class="dropdown-menu">
@@ -65,7 +70,7 @@
                     </li>
                     <li class="nav-item">
                       <a href="#" class="nav-link d-inline-block mt-2">
-                        <img src="images/icon-cart-filled.svg" alt="" srcset="">
+                        <img src="../../images/icon-cart-filled.svg" alt="" srcset="">
                         <div class="card-badge">3</div>
                       </a>
                     </li>
@@ -93,50 +98,64 @@
           <div class="section-content section-dashboard-home" data-aos="fade-up">
             <div class="container-fluid">
               <div class="dashboard-heading">
-                <h2 class="dashboard-title">Create New Product</h2>
+                <h2 class="dashboard-title">Produk Baru</h2>
                 <p class="dashboard-subtitle">
-                  Create your own product
+                  Tambah Produk Baru
                 </p>
               </div>
               <div class="dashboard-content">
                 <div class="row">
                   <div class="col-12">
-                    <form action="">
+                    <form action="store.php" method="POST" enctype="multipart/form-data">
                       <div class="card">
                         <div class="card-body">
                           <div class="row">
                             <div class="col-md-6">
                               <div class="mb-3">
-                                <label class="form-label">Product Name</label>
-                                <input type="text" class="form-control">
+                                <label class="form-label">Nama Produk</label>
+                                <input type="text" name="product_name" class="form-control">
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="mb-3">
-                                <label class="form-label">Price</label>
-                                <input type="number" class="form-control">
+                                <label class="form-label">Harga</label>
+                                <input type="number" name="price" class="form-control">
                               </div>
                             </div>
                             <div class="col-md-12">
                               <div class="mb-3">
                                 <label class="form-label">Kategori</label>
-                                <select name="category" class="form-select">
-                                  <option value="" disabled>Select Category</option>
+                                <select name="category" name="category" class="form-select">
+                                  <option value="" disabled>Pilih Kategori</option>
+                                  <?php
+                                    $query = mysqli_query($config, 'SELECT * FROM categories');
+                                    while($data = mysqli_fetch_array($query)) {
+                                  ?>
+                                    <option value="<?= $data['categories_id']; ?>"><?= $data['name_category'] ?></option>
+                                  <?php
+                                    }
+                                  ?>
                                 </select>
                               </div>
                             </div>
                             <div class="col-md-12">
                               <div class="mb-3">
-                                <label class="form-label">Description</label>
-                                <textarea class="form-control" name="editor1" id="editor1"
+                                <label class="form-label">Deskripsi</label>
+                                <textarea class="form-control" name="deskripsi" id="editor1" 
                                   rows="10" cols="80"></textarea>
                               </div>
                             </div>
                             <div class="col-md-12">
                               <div class="mb-3">
-                                <label class="form-label">Thumbnails</label>
-                                <input type="file" class="form-control">
-                                <p class="text-muted">Kamu dapat memilih lebih dari satu file</p>
+                                <label class="form-label">Berat</label>
+                                <input type="number" class="form-control" name="berat">
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="mb-3">
+                                <label class="form-label">Foto</label>
+                                <input type="file" class="form-control" name="foto[]" multiple required>
+                                <p class="text-muted">Kamu dapat memilih lebih dari satu file [.png | .jpg | .jpeg]</p>
                               </div>
                             </div>
                           </div>
@@ -160,8 +179,8 @@
   </div>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.slim.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../vendor/jquery/jquery.slim.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
