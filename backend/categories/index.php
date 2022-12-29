@@ -27,10 +27,10 @@
             <img src="../../images/dashboard-logo.png" alt="" srcset="" class="my-4" width="120px">
           </div>
           <div class="list-group list-group-flush">
-            <a href="" class="list-group-item list-group-item-action active">Dashboard</a>
+            <a href="" class="list-group-item list-group-item-action ">Dashboard</a>
             <a href="../products/index.php" class="list-group-item list-group-item-action">Produk</a>
             <a href="../transactions/index.php" class="list-group-item list-group-item-action">Transaksi</a>
-            <a href="../categories/" class="list-group-item list-group-item-action">Kategori</a>
+            <a href="#" class="list-group-item list-group-item-action active">Kategori</a>
             <a href="#" class="list-group-item list-group-item-action">Pelanggan</a>
             <a href="#" class="list-group-item list-group-item-action">Ongkos Kirim</a>
             <a href="#" class="list-group-item list-group-item-action">Akun</a>
@@ -85,116 +85,62 @@
 
           <!-- Section Content -->
           <div class="section-content section-dashboard-home" data-aos="fade-up">
-            <div class="container-fluid">
+          <div class="container-fluid">
               <div class="dashboard-heading">
-                <h2 class="dashboard-title">Dashboard</h2>
+                <h2 class="dashboard-title">My Products</h2>
                 <p class="dashboard-subtitle">
-                  Look what you have made today!
+                  Manage it well and get money
                 </p>
               </div>
               <div class="dashboard-content">
                 <div class="row">
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <div class="card-body">
-                        <div class="dashboard-card-title">
-                          Customer
-                        </div>
-                        <div class="dashboard-card-subtitle">
-                          15.209
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <div class="card-body">
-                        <div class="dashboard-card-title">
-                          Revenue
-                        </div>
-                        <div class="dashboard-card-subtitle">
-                          $931,290
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <div class="card-body">
-                        <div class="dashboard-card-title">
-                          Transaction
-                        </div>
-                        <div class="dashboard-card-subtitle">
-                          22,409,399
-                        </div>
-                      </div>
-                    </div>
+                  <div class="col-12">
+                    <a href="create.php" class="btn btn-success">Add New Product</a>
                   </div>
                 </div>
-                <div class="row mt-3">
-                  <div class="col-12 mt-2">
-                    <h5 class="mb-3">Recent Transactions</h5>
-                    <a href="dashboard-transactions-details.html" class="card card-list d-block">
+                <div class="row mt-4">
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="dashboard-products-details.html" class="card card-dashboard-product d-block">
                       <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-1">
-                            <img src="../images/dashboard-icon-product-1.png" alt="" srcset="">
-                          </div>
-                          <div class="col-md-4">
-                            Shirup Marzzan
-                          </div>
-                          <div class="col-md-3">
-                            Angga Risky
-                          </div>
-                          <div class="col-md-3">
-                            12 Januari, 2020
-                          </div>
-                          <div class="col-md-1 d-none d-md-block">
-                            <img src="../../images/dashboard-arrow-right.svg" alt="">
-                          </div>
-                        </div>
+                        <img src="../../images/product-card-1.png" alt="" class="w-100 mb-2" srcset="">
+                        <div class="product-title">Shirup Marzzan</div>
+                        <div class="product-category">Foods</div>
                       </div>
                     </a>
-                    <a class="card card-list d-block" href="dashboard-transactions-details.html">
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="dashboard-products-details.html" class="card card-dashboard-product d-block">
                       <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-1">
-                            <img src="../../images/dashboard-icon-product-2.png" alt="" />
-                          </div>
-                          <div class="col-md-4">
-                            LeBrone X
-                          </div>
-                          <div class="col-md-3">
-                            Masayoshi
-                          </div>
-                          <div class="col-md-3">
-                            11 Januari, 2020
-                          </div>
-                          <div class="col-md-1 d-none d-md-block">
-                            <img src="../../images/dashboard-arrow-right.svg" alt="" />
-                          </div>
-                        </div>
+                        <img src="../../images/product-card-2.png" alt="" class="w-100 mb-2" srcset="">
+                        <div class="product-title">Shirup Marzzan</div>
+                        <div class="product-category">Foods</div>
                       </div>
                     </a>
-                    <a class="card card-list d-block" href="dashboard-transactions-details.html">
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="dashboard-products-details.html" class="card card-dashboard-product d-block">
                       <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-1">
-                            <img src="../../images/dashboard-icon-product-3.png" alt="" />
-                          </div>
-                          <div class="col-md-4">
-                            Soffa Lembutte
-                          </div>
-                          <div class="col-md-3">
-                            Shayna
-                          </div>
-                          <div class="col-md-3">
-                            11 Januari, 2020
-                          </div>
-                          <div class="col-md-1 d-none d-md-block">
-                            <img src="../../images/dashboard-arrow-right.svg" alt="" />
-                          </div>
-                        </div>
+                        <img src="../../images/product-card-3.png" alt="" class="w-100 mb-2" srcset="">
+                        <div class="product-title">Shirup Marzzan</div>
+                        <div class="product-category">Foods</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="dashboard-products-details.html" class="card card-dashboard-product d-block">
+                      <div class="card-body">
+                        <img src="../../images/product-card-4.png" alt="" class="w-100 mb-2" srcset="">
+                        <div class="product-title">Shirup Marzzan</div>
+                        <div class="product-category">Foods</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="dashboard-products-details.html" class="card card-dashboard-product d-block">
+                      <div class="card-body">
+                        <img src="../../images/product-card-5.png" alt="" class="w-100 mb-2" srcset="">
+                        <div class="product-title">Shirup Marzzan</div>
+                        <div class="product-category">Foods</div>
                       </div>
                     </a>
                   </div>

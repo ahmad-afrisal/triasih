@@ -30,7 +30,7 @@
             <a href="" class="list-group-item list-group-item-action active">Dashboard</a>
             <a href="../products/index.php" class="list-group-item list-group-item-action">Produk</a>
             <a href="../transactions/index.php" class="list-group-item list-group-item-action">Transaksi</a>
-            <a href="../categories/" class="list-group-item list-group-item-action">Kategori</a>
+            <a href="#" class="list-group-item list-group-item-action">Kategori</a>
             <a href="#" class="list-group-item list-group-item-action">Pelanggan</a>
             <a href="#" class="list-group-item list-group-item-action">Ongkos Kirim</a>
             <a href="#" class="list-group-item list-group-item-action">Akun</a>
