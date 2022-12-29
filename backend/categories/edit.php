@@ -1,21 +1,6 @@
 <?php
-  session_start();
+    include '../components/header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-
-  <title>Store - Your Best Marketplace</title>
-
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link href="../../style/main.css" rel="stylesheet" />
-</head>
 
 <body>
   <div class="page-dashboard">
@@ -85,122 +70,50 @@
 
           <!-- Section Content -->
           <div class="section-content section-dashboard-home" data-aos="fade-up">
-            <div class="container-fluid">
+          <div class="container-fluid">
               <div class="dashboard-heading">
-                <h2 class="dashboard-title">Dashboard</h2>
+                <h2 class="dashboard-title">Shriup Marzan</h2>
                 <p class="dashboard-subtitle">
-                  Look what you have made today!
+                  Product Details
                 </p>
               </div>
               <div class="dashboard-content">
                 <div class="row">
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <div class="card-body">
-                        <div class="dashboard-card-title">
-                          Customer
-                        </div>
-                        <div class="dashboard-card-subtitle">
-                          15.209
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <div class="card-body">
-                        <div class="dashboard-card-title">
-                          Revenue
-                        </div>
-                        <div class="dashboard-card-subtitle">
-                          $931,290
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <div class="card-body">
-                        <div class="dashboard-card-title">
-                          Transaction
-                        </div>
-                        <div class="dashboard-card-subtitle">
-                          22,409,399
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row mt-3">
-                  <div class="col-12 mt-2">
-                    <h5 class="mb-3">Recent Transactions</h5>
-                    <a href="dashboard-transactions-details.html" class="card card-list d-block">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-1">
-                            <img src="../images/dashboard-icon-product-1.png" alt="" srcset="">
+                  <div class="col-12">
+                    <form action="">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <div class="mb-3">
+                                <img src="../../images/product-card-1.png" class="img-fluid" alt="" srcset="">
+                              </div>
+                            </div>
+                            <div class="col-md-9">
+                              <div class="mb-3">
+                                <label class="form-label">Gambar</label>
+                                <input type="file" class="form-control">
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label">Nama Kategori</label>
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
                           </div>
-                          <div class="col-md-4">
-                            Shirup Marzzan
-                          </div>
-                          <div class="col-md-3">
-                            Angga Risky
-                          </div>
-                          <div class="col-md-3">
-                            12 Januari, 2020
-                          </div>
-                          <div class="col-md-1 d-none d-md-block">
-                            <img src="../../images/dashboard-arrow-right.svg" alt="">
+                          <div class="row">
+                            <div class="col-12 text-end d-grid gap-2">
+                              <button type="submit" class="btn btn-success px-5 btn-block">Simpan</button>
+                              <a href=""  class="btn btn-danger px-5 btn-block">Hapus</a>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </a>
-                    <a class="card card-list d-block" href="dashboard-transactions-details.html">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-1">
-                            <img src="../../images/dashboard-icon-product-2.png" alt="" />
-                          </div>
-                          <div class="col-md-4">
-                            LeBrone X
-                          </div>
-                          <div class="col-md-3">
-                            Masayoshi
-                          </div>
-                          <div class="col-md-3">
-                            11 Januari, 2020
-                          </div>
-                          <div class="col-md-1 d-none d-md-block">
-                            <img src="../../images/dashboard-arrow-right.svg" alt="" />
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                    <a class="card card-list d-block" href="dashboard-transactions-details.html">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-1">
-                            <img src="../../images/dashboard-icon-product-3.png" alt="" />
-                          </div>
-                          <div class="col-md-4">
-                            Soffa Lembutte
-                          </div>
-                          <div class="col-md-3">
-                            Shayna
-                          </div>
-                          <div class="col-md-3">
-                            11 Januari, 2020
-                          </div>
-                          <div class="col-md-1 d-none d-md-block">
-                            <img src="../../images/dashboard-arrow-right.svg" alt="" />
-                          </div>
-                        </div>
-                      </div>
-                    </a>
+                    </form>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
           </div>
           
         </div>
@@ -208,19 +121,6 @@
     </div>
   </div>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.slim.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <script>
-    $('#menu-toggle').click(function (e) {
-      e.preventDefault();
-      $('#wrapper').toggleClass('toggled');
-    });
-  </script>
-</body>
-
-</html>
+  <?php
+    include '../components/footer.php';
+  ?>

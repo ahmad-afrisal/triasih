@@ -1,21 +1,7 @@
 <?php
-  session_start();
+  include '../components/header.php';
+
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-
-  <title>Store - Your Best Marketplace</title>
-
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link href="../../style/main.css" rel="stylesheet" />
-</head>
 
 <body>
   <div class="page-dashboard">
@@ -27,10 +13,10 @@
             <img src="../../images/dashboard-logo.png" alt="" srcset="" class="my-4" width="120px">
           </div>
           <div class="list-group list-group-flush">
-            <a href="" class="list-group-item list-group-item-action active">Dashboard</a>
+            <a href="" class="list-group-item list-group-item-action">Dashboard</a>
             <a href="../products/index.php" class="list-group-item list-group-item-action">Produk</a>
             <a href="../transactions/index.php" class="list-group-item list-group-item-action">Transaksi</a>
-            <a href="#" class="list-group-item list-group-item-action">Kategori</a>
+            <a href="../categories/" class="list-group-item list-group-item-action active">Kategori</a>
             <a href="#" class="list-group-item list-group-item-action">Pelanggan</a>
             <a href="#" class="list-group-item list-group-item-action">Ongkos Kirim</a>
             <a href="#" class="list-group-item list-group-item-action">Akun</a>
@@ -85,122 +71,50 @@
 
           <!-- Section Content -->
           <div class="section-content section-dashboard-home" data-aos="fade-up">
-            <div class="container-fluid">
+          <div class="container-fluid">
               <div class="dashboard-heading">
-                <h2 class="dashboard-title">Dashboard</h2>
+                <h2 class="dashboard-title">Buat Kategori Baru</h2>
                 <p class="dashboard-subtitle">
-                  Look what you have made today!
+                  Kategori Baru
                 </p>
               </div>
               <div class="dashboard-content">
                 <div class="row">
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <div class="card-body">
-                        <div class="dashboard-card-title">
-                          Customer
-                        </div>
-                        <div class="dashboard-card-subtitle">
-                          15.209
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <div class="card-body">
-                        <div class="dashboard-card-title">
-                          Revenue
-                        </div>
-                        <div class="dashboard-card-subtitle">
-                          $931,290
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <div class="card-body">
-                        <div class="dashboard-card-title">
-                          Transaction
-                        </div>
-                        <div class="dashboard-card-subtitle">
-                          22,409,399
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row mt-3">
-                  <div class="col-12 mt-2">
-                    <h5 class="mb-3">Recent Transactions</h5>
-                    <a href="dashboard-transactions-details.html" class="card card-list d-block">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-1">
-                            <img src="../images/dashboard-icon-product-1.png" alt="" srcset="">
+                  <div class="col-12">
+                    <form action="store.php" method="POST">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-md-3">
+                              <div class="mb-3">
+                                <img src="../../images/default.png" id="image-preview" class="img-fluid" alt="" srcset="">
+                              </div>
+                            </div>
+                            <div class="col-md-9">
+                              <div class="mb-3">
+                                <label class="form-label">Gambar</label>
+                                <input type="file" class="form-control" id="image-source" name="" onchange="previewImage();">
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label">Nama Kategori</label>
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
                           </div>
-                          <div class="col-md-4">
-                            Shirup Marzzan
-                          </div>
-                          <div class="col-md-3">
-                            Angga Risky
-                          </div>
-                          <div class="col-md-3">
-                            12 Januari, 2020
-                          </div>
-                          <div class="col-md-1 d-none d-md-block">
-                            <img src="../../images/dashboard-arrow-right.svg" alt="">
+                          <div class="row">
+                            <div class="col-12 text-end d-grid gap-2">
+                              <button type="submit" class="btn btn-success px-5 btn-block">Simpan</button>
+                        
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </a>
-                    <a class="card card-list d-block" href="dashboard-transactions-details.html">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-1">
-                            <img src="../../images/dashboard-icon-product-2.png" alt="" />
-                          </div>
-                          <div class="col-md-4">
-                            LeBrone X
-                          </div>
-                          <div class="col-md-3">
-                            Masayoshi
-                          </div>
-                          <div class="col-md-3">
-                            11 Januari, 2020
-                          </div>
-                          <div class="col-md-1 d-none d-md-block">
-                            <img src="../../images/dashboard-arrow-right.svg" alt="" />
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                    <a class="card card-list d-block" href="dashboard-transactions-details.html">
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-md-1">
-                            <img src="../../images/dashboard-icon-product-3.png" alt="" />
-                          </div>
-                          <div class="col-md-4">
-                            Soffa Lembutte
-                          </div>
-                          <div class="col-md-3">
-                            Shayna
-                          </div>
-                          <div class="col-md-3">
-                            11 Januari, 2020
-                          </div>
-                          <div class="col-md-1 d-none d-md-block">
-                            <img src="../../images/dashboard-arrow-right.svg" alt="" />
-                          </div>
-                        </div>
-                      </div>
-                    </a>
+                    </form>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
           </div>
           
         </div>
@@ -214,13 +128,23 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-  </script>
-  <script>
+
     $('#menu-toggle').click(function (e) {
       e.preventDefault();
       $('#wrapper').toggleClass('toggled');
     });
+
+    function previewImage() {
+      document.getElementById("image-preview").style.display = "block";
+      var oFReader = new FileReader();
+      oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
+
+      oFReader.onload = function(oFREvent) {
+        document.getElementById("image-preview").src = oFREvent.target.result;
+      };
+    };
   </script>
+
 </body>
 
 </html>

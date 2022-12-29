@@ -1,21 +1,6 @@
 <?php
-  session_start();
+    include '../components/header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-
-  <title>Store - Your Best Marketplace</title>
-
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link href="../../style/main.css" rel="stylesheet" />
-</head>
 
 <body>
   <div class="page-dashboard">
@@ -87,63 +72,37 @@
           <div class="section-content section-dashboard-home" data-aos="fade-up">
           <div class="container-fluid">
               <div class="dashboard-heading">
-                <h2 class="dashboard-title">My Products</h2>
+                <h2 class="dashboard-title">Kategori</h2>
                 <p class="dashboard-subtitle">
-                  Manage it well and get money
+                  Kategori Terpopuler
                 </p>
               </div>
               <div class="dashboard-content">
                 <div class="row">
                   <div class="col-12">
-                    <a href="create.php" class="btn btn-success">Add New Product</a>
+                    <a href="create.php" class="btn btn-success">Tambah Kategori</a>
                   </div>
                 </div>
                 <div class="row mt-4">
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="dashboard-products-details.html" class="card card-dashboard-product d-block">
-                      <div class="card-body">
-                        <img src="../../images/product-card-1.png" alt="" class="w-100 mb-2" srcset="">
-                        <div class="product-title">Shirup Marzzan</div>
-                        <div class="product-category">Foods</div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="dashboard-products-details.html" class="card card-dashboard-product d-block">
-                      <div class="card-body">
-                        <img src="../../images/product-card-2.png" alt="" class="w-100 mb-2" srcset="">
-                        <div class="product-title">Shirup Marzzan</div>
-                        <div class="product-category">Foods</div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="dashboard-products-details.html" class="card card-dashboard-product d-block">
-                      <div class="card-body">
-                        <img src="../../images/product-card-3.png" alt="" class="w-100 mb-2" srcset="">
-                        <div class="product-title">Shirup Marzzan</div>
-                        <div class="product-category">Foods</div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="dashboard-products-details.html" class="card card-dashboard-product d-block">
-                      <div class="card-body">
-                        <img src="../../images/product-card-4.png" alt="" class="w-100 mb-2" srcset="">
-                        <div class="product-title">Shirup Marzzan</div>
-                        <div class="product-category">Foods</div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="dashboard-products-details.html" class="card card-dashboard-product d-block">
-                      <div class="card-body">
-                        <img src="../../images/product-card-5.png" alt="" class="w-100 mb-2" srcset="">
-                        <div class="product-title">Shirup Marzzan</div>
-                        <div class="product-category">Foods</div>
-                      </div>
-                    </a>
-                  </div>
+
+                  <?php
+                    $query = mysqli_query($config, "SELECT * FROM categories");
+                    while ($data = mysqli_fetch_array($query)) {
+                  ?>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                      <a href="#" class="component-categories d-block " style="background-color: white;">
+                        <div class="categories-image position-relative">
+                          <img src="../../images/categories/<?= $data['photo']; ?>" alt="" srcset="" class="w-100">
+                        </div>
+                        <p class="categories-text">
+                        <?= $data['name_category']; ?>
+                        </p>
+                      </a>
+                    </div>
+                  <?php
+                    }
+                  ?>
+
                 </div>
               </div>
             </div>
@@ -154,19 +113,6 @@
     </div>
   </div>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.slim.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <script>
-    $('#menu-toggle').click(function (e) {
-      e.preventDefault();
-      $('#wrapper').toggleClass('toggled');
-    });
-  </script>
-</body>
-
-</html>
+  <?php
+    include '../components/footer.php';
+  ?>

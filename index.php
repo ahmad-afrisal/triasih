@@ -53,13 +53,13 @@ session_start();
                 </a>
                 <div class="dropdown-menu">
                   <?php
-                    if(isset($_SESSION['roles']) == 'ADMIN') {
+                    if($_SESSION['roles'] == 'ADMIN') {
                       echo '<a href="backend/dashboard/dashboard.php" class="dropdown-item">Dashboard</a>       
                       <a href="backend/users/dashboard-account.php" class="dropdown-item">Settings</a>
                       <div class="dropdwon-divider"></div>
                       <a href="logout.php" class="dropdown-item">Logout</a>';
                     } else {
-                      echo '<a href="frontend/dashboard/dashboard.php" class="dropdown-item">Dashboard</a>       
+                      echo '<a href="frontend/dashboard.php" class="dropdown-item">Dashboard</a>       
                       <a href="frontend/users/dashboard-account.php" class="dropdown-item">Settings</a>
                       <div class="dropdwon-divider"></div>
                       <a href="logout.php" class="dropdown-item">Logout</a>';
@@ -71,6 +71,9 @@ session_start();
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link d-inline-block mt-2">
+                  <?php
+
+                  ?>
                   <img src="images/icon-cart-empty.svg" alt="" srcset="">
                 </a>
               </li>
