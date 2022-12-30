@@ -34,7 +34,7 @@
             <a href="dashboard-transactions.html" class="list-group-item list-group-item-action">Pesanan</a>
             <a href="dashboard-settings.html" class="list-group-item list-group-item-action ">Kategori</a>
             <a href="dashboard-account.html" class="list-group-item list-group-item-action">Pelanggan</a>
-            <a href="dashboard-account.html" class="list-group-item list-group-item-action  active">Provinsi</a>
+            <a href="dashboard-account.html" class="list-group-item list-group-item-action active">Provinsi</a>
             <a href="index.html" class="list-group-item list-group-item-action">Sign Out</a>
           </div>
         </div>

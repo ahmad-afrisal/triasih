@@ -34,9 +34,8 @@
             <a href="#" class="list-group-item list-group-item-action">Pelanggan</a>
             <a href="../provinces/index.php" class="list-group-item list-group-item-action">Provinsi</a>
             <a href="#" class="list-group-item list-group-item-action">Ongkos Kirim</a>
-
             <a href="#" class="list-group-item list-group-item-action">Akun</a>
-            <a href="logout.php" class="list-group-item list-group-item-action">Sign Up</a>
+            <a href="logout.php" class="list-group-item list-group-item-action">Sign Out</a>
 
           </div>
         </div>
