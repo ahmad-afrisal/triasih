@@ -88,15 +88,15 @@
           <div class="section-content section-dashboard-home" data-aos="fade-up">
             <div class="container-fluid">
                 <div div class="dashboard-heading">
-                    <h2 class="dashboard-title">Daftar Daerah</h2>
+                    <h2 class="dashboard-title">Daftar Provinsi</h2>
                     <p class="dashboard-subtitle">
-                        Ongkos Kirim
+                        Kategori Baru
                     </p>
                 </div>
                 <div class="dashboard-content">
                     <div class="row mb-3">
                         <div class="col-12">
-                            <a href="create.php" class="btn btn-success">Tambah Ongkir</a>
+                            <a href="create.php" class="btn btn-success">Tambah Provinsi</a>
                         </div>
                     </div>
                     <div class="row">

@@ -108,7 +108,7 @@
                             <div class="col-md-6">
                               <div class="mb-3">
                                 <label class="form-label"><b>Ongkos Kirim<b></label>
-                                <input type="text" class="form-control" value="<?php echo $data['shipping_cost']?>">
+                                <input type="number" class="form-control" value="<?php echo $data['shipping_cost']?>">
                               </div>
                             </div>
                           </div>
